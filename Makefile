@@ -1,4 +1,8 @@
-.PHONY: all
+# Set the default goal
+.DEFAULT_GOAL=all
+
+# A phony target is one that is not really the name of a file; rather it is just a name for a recipe to be executed when you make an explicit request. There are two reasons to use a phony target: to avoid a conflict with a file of the same name, and to improve performance.
+.PHONY: all clean mostlyclean distclean realclean clobber install print tar shar dist TAGS check test
 
 # Make all the top-level targets the makefile knows about.
 all:
@@ -32,8 +36,7 @@ dist:
 # Update a tags table for this program.
 TAGS:
 
-check:
-
 # Perform self tests on the program this makefile builds.
+check:
 test:
 
